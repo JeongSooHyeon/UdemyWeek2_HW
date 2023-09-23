@@ -140,7 +140,7 @@ GameObject:
   m_Icon: {fileID: 0}
   m_NavMeshLayer: 0
   m_StaticEditorFlags: 0
-  m_IsActive: 1
+  m_IsActive: 0
 --- !u!224 &121588408
 RectTransform:
   m_ObjectHideFlags: 0
@@ -335,6 +335,7 @@ MonoBehaviour:
   m_Script: {fileID: 11500000, guid: 9375b0189f79482428867154edbb0d5a, type: 3}
   m_Name: 
   m_EditorClassIdentifier: 
+  image: {fileID: 121588409}
   textMsg: {fileID: 2024742466}
   flagDisplay: 0
 --- !u!1 &509702862
@@ -663,7 +664,7 @@ MonoBehaviour:
   voice1: {fileID: 8300000, guid: 7d47792ea81e4408fbef69366151a14a, type: 3}
   voice2: {fileID: 8300000, guid: c0cc9bb81e32248d7b64b27359c13a43, type: 3}
   voice3: {fileID: 8300000, guid: d42eccd24e0ee4aef80df9398ec0747c, type: 3}
-  message: {fileID: 0}
+  message: {fileID: 472693380}
 --- !u!114 &734517773
 MonoBehaviour:
   m_ObjectHideFlags: 0

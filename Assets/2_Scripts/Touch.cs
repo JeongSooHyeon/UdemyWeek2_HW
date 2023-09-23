@@ -14,6 +14,8 @@ public class Touch : MonoBehaviour
 
     public MsgDisp message;
 
+    DateTime today;
+
     // 모션 스테이트의 ID 얻기
     private int motionIdol = Animator.StringToHash("Base Layer.Idol");
 
@@ -21,6 +23,7 @@ public class Touch : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         univoice = GetComponent<AudioSource>();
+        today = DateTime.Now.Date;
     }
 
     void Update()
@@ -49,7 +52,7 @@ public class Touch : MonoBehaviour
                     animator.SetBool("Face_Angry", false);
                     univoice.clip = voice1;
                     univoice.Play();
-                    message.flagDisplay = true;
+                    message.setActiveTure();
                     message.ShowMessage("안녕!\n오늘도 힘차게 시작해보자!");
                 }
                 else if (hitobj.tag == "Body")
@@ -59,7 +62,7 @@ public class Touch : MonoBehaviour
                     animator.SetBool("Face_Angry", true);
                     univoice.clip = voice2;
                     univoice.Play();
-                    message.flagDisplay = true;
+                    message.setActiveTure();
                     message.ShowMessage("꺅!");
                 }
                 else if(hitobj.tag == "Arm")
@@ -69,8 +72,8 @@ public class Touch : MonoBehaviour
                     animator.SetBool("Face_Angry", false);
                     univoice.clip = voice3;
                     univoice.Play();
-                    message.flagDisplay = true;
-                    message.ShowMessage("쿄우와 " + DateTime.Now.Date.ToString("G") + "데스네~!");
+                    message.setActiveTure();
+                    message.ShowMessage("쿄우와 " + today.ToString("G") + "데스네~!");
                 }
                 Debug.Log(hitobj.tag);
             }
