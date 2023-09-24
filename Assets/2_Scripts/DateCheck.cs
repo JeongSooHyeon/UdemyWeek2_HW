@@ -92,11 +92,4 @@ public class DateCheck : MonoBehaviour
         PlayerPrefs.SetInt("Month", nowMonth);
         PlayerPrefs.SetInt("Day", nowDay);
     }
-
-
-    // Update is called once per frame
-    void Update()
-    {
-        
-    }
 }

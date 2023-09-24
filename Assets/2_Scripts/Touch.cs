@@ -23,7 +23,6 @@ public class Touch : MonoBehaviour
     {
         animator = GetComponent<Animator>();
         univoice = GetComponent<AudioSource>();
-        today = DateTime.Now.Date;
     }
 
     void Update()
@@ -39,6 +38,7 @@ public class Touch : MonoBehaviour
 
         if (Input.GetMouseButtonDown(0))
         {
+            today = DateTime.Now;
             Ray ray = Camera.main.ScreenPointToRay(Input.mousePosition);
             RaycastHit hit;
 
@@ -73,7 +73,7 @@ public class Touch : MonoBehaviour
                     univoice.clip = voice3;
                     univoice.Play();
                     message.setActiveTure();
-                    message.ShowMessage("쿄우와 " + today.ToString("G") + "데스네~!");
+                    message.ShowMessage("오늘은 " + today.ToString("G") + "이야!");
                 }
                 Debug.Log(hitobj.tag);
             }
